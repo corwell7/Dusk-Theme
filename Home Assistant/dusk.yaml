@@ -1,0 +1,212 @@
+# By Corey
+
+midnight:
+  card-mod-theme: midnight
+  card-mod-view: &card-mod-view |
+    .main-title {
+      font-size: 10pt;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    #tabbar {
+      font-size: 10pt;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    #tabbar:not(.bottom-bar) {
+      justify-content: left;
+    }
+    #Set fixed background (works on desktop AND mobile)
+    ha-app-layout {
+      position: relative;
+    }
+    ha-app-layout::before {
+      content: '';
+      position: fixed;
+      z-index: -1;
+      display: block;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      right: 0px;
+      background-image: url("/hacsfiles/themes/midnight/towerdark.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+    hui-view {
+      background: none !important;
+    }
+
+  card-mod-row-yaml: &card-mod-row |
+    .: |
+      hui-generic-entity-row {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+      .info, .info > * {
+        white-space: normal !important;
+      }
+      .secondary {
+        font-size: var(--small-font-size);
+        line-height: 1.4;
+      }
+      .state, .entity div {
+        font-size: var(--h5-font-size);
+        font-weight: 400;
+      }
+    hui-generic-entity-row$: |
+      .info, .info > * {
+        white-space: normal !important;
+      }
+      .secondary {
+        font-size: var(--small-font-size);
+        line-height: 1.4;
+      }                  
+      .state, .entity div {
+        font-size: var(--h5-font-size);
+        font-weight: 400;
+      }
+      
+  card-mod-card: &card-mod-card |
+    ha-card {
+      -webkit-backdrop-filter: blur(8px) saturate(150%);
+      backdrop-filter: blur(8px) saturate(150%);
+    }
+    ha-card .value {
+      font-size: var(--h1-font-size);
+      font-weight: var(--h1-font-weight);
+      margin-right: 0;
+    }
+    ha-card .name {
+      font-size: var(--body-font-size);
+      line-height: var(--body-line-height);
+      font-weight: var(--body-font-weight);
+      color: var(--primary-text-color);
+    }
+    ha-card .info {
+      line-height: 32px;
+      padding-top: 8px;
+    }
+    ha-card .header {
+      padding-top: 16px !important;
+    }
+    .icon {
+      line-height: 16px !important;
+    }
+    ha-card .measurement {
+      font-size: var(--h6-font-size);
+      font-weight: 700;
+      color: var(--secondary-text-color);
+      text-transform: uppercase;
+    }
+    .card-header, .card-header .name {
+      font-size: var(--card-title-font-size);
+      line-height: var(--card-title-line-height);
+      font-weight: var(--card-title-font-weight);
+      letter-spacing: 0;
+    }
+    .card-header {
+      margin-bottom: 8px;
+      padding: 12px 16px;
+    }
+    :host ::slotted(.card-content:not(:first-child)), slot:not(:first-child)::slotted(.card-content) {
+      margin-top: 0;
+    }
+    .entities {
+      align-items: flex-start !important;
+    }
+
+  card-mod-glance-yaml: &card-mod-glance |
+    .: |
+      state-badge {
+        --mdc-icon-size: 32px;
+        order: 0;
+      }
+      div.name {
+        font-size: var(--body-font-size);
+        color: var(--primary-font-color);
+        order: 1 !important;
+      }
+      div {
+        order: 2;
+        font-size: var(--small-font-size);
+        color: var(--secondary-text-color);
+        line-height: 1.33;
+        white-space: unset !important;
+      }
+  card-mod-root-yaml: &card-mod-root |
+    .: |
+      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        app-header, app-toolbar {
+          background-color: "rgba(var(--rgb-primary-background-color),.33)"
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+        }
+      }
+      app-toolbar [main-title] {
+        font-size: var(--h5-font-size);
+        line-height: 1.1;
+        font-weight: var(--h5-font-weight);
+        text-transform: uppercase;
+        margin-left: 8px !important;
+      }
+    app-header$: |
+      :host::before {
+        box-shadow: inset 0px 4px 6px -4px rgb(0 0 0 / 10%) !important;
+      }
+      
+  card-mod-sidebar: &card-mod-sidebar |
+    .menu .title {
+      font-weight: 500;
+    }
+    :host([expanded]) paper-icon-item {
+      width: 100%;
+    }
+    .iron-selected paper-icon-item {
+      border-left: 3px solid var(--accent-color) !important;
+      border-radius: 5px !important;
+      padding-left: 9px !important;
+    }
+    .profile.iron-selected paper-icon-item {
+      padding-left: 1px !important;
+    }
+    paper-icon-item span {
+      font-weight: normal !important;
+    }
+
+  modes:
+    dark:
+      #Text
+      secondary-text-color: slategray
+      
+      #Card
+      card-background-color: var(--secondary-background-color)
+      #paper-listbox-background-color: var(--primary-background-color)
+      ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.5)"
+      ha-card-background: "rgba(0, 10, 20, 0.5)"
+      ha-card-border-radius: 15px
+      paper-card-background-color: var(--ha-card-background)
+      
+      #Background
+      #background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/midnight/towerdark.jpg')"
+      lovelace-background: var(--background-image)
+      
+      #Colour
+      accent-color: var(--primary-color)
+      primary-color: "#037171"
+      primary-background-color: "#12171a"
+      secondary-background-color: "#151f24"
+      divider-color: none
+      app-header-background-color: "rgba(0, 10, 20, 0.3)"
+      app-header-edit-background-color: var(--app-header-background-color)
+
+      #Popup Blur
+      dialog-backdrop-filter: blur(5px)
+      iron-overlay-backdrop-opacity: 1
+      iron-overlay-backdrop-background-color: rgba(0, 0, 0, 0.32)
+
+      #States
+      state-icon-color: "#35fdaa"
+      state-icon-active-color: "#fd356e"
