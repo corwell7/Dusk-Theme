@@ -1,5 +1,5 @@
-## Dusk-Theme
+# Dusk-Theme
 Some themes for stuff
 
-# Home Assistant
+## Home Assistant
 REQUIRES CARD MOD
