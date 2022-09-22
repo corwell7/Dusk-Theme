@@ -1,2 +1,2 @@
-# Midnight-Theme
+# Dusk-Theme
 Some themes for stuff
