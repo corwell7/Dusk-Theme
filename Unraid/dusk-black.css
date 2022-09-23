@@ -173,7 +173,7 @@ hr {
 
 /* Sidebar */
 .sidenav {
-    background-color: unset;
+    background-color: unset !important;
     -webkit-backdrop-filter: blur(15px) saturate(150%);
     backdrop-filter: blur(15px) saturate(150%);
 }
