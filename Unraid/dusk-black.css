@@ -29,6 +29,13 @@ table tbody td {
 	padding: 10px
 }
 
+div.shade-black {
+    background-color: var(--menu-color) !important;
+    padding-top: 15px !important;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+}
+
 /* Popup */
 .ui-widget-content {
     background: var(--menu-color) !important;
@@ -124,7 +131,10 @@ div.tab [type="radio"] + label:hover {
 
 /* Sweet Alerts Popup */
 .sweet-alert h2 {
-    background-color: var(--color-beta) !important;
+	background-color: var(--color-beta) !important;
+	border-radius: 10px;
+	margin: 10px !important;
+	padding-left: 10px !important;
 }
 .sweet-alert {
     background-color: var(--menu-color) !important;    
