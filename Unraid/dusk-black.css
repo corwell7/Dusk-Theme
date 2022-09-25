@@ -25,6 +25,10 @@ body {
     border-radius: 10px;
 }
 
+table tbody td {
+	padding: 10px
+}
+
 /* Popup */
 .ui-widget-content {
     background: var(--menu-color) !important;
@@ -96,7 +100,7 @@ div.content.shift {
 div.content {
     -webkit-backdrop-filter: blur(15px) saturate(150%);
     backdrop-filter: blur(15px) saturate(150%);
-    border: 2px solid #037171;
+    border: 2px solid var(--color-gamma);
     border-radius: 10px;
     box-sizing: border-box;
     padding-left: 20px;
@@ -112,10 +116,23 @@ div.tab [type="radio"] + label {
     border-radius: 4px;
 }
 div.tab [type="radio"]:checked + label {
-    border: 1px solid #037171;
+    border: 1px solid var(--color-gamma);
 }
 div.tab [type="radio"] + label:hover {
-    border: 1px solid #037171;
+    border: 1px solid var(--color-gamma);
+}
+
+/* Sweet Alerts Popup */
+.sweet-alert h2 {
+    background-color: var(--color-beta) !important;
+}
+.sweet-alert {
+    background-color: var(--menu-color) !important;    
+    border: none !important;
+}
+.sweet-alert button {
+    background: var(--color-beta) !important;
+    color: var(--color-gamma);
 }
 
 /* Dash */
@@ -123,7 +140,7 @@ table.share_status.dashboard {
     border: hidden;
 }
 table.share_status.dashboard tr > td.next {
-    border-top: 1px solid #037171;
+    border-top: 1px solid var(--color-gamma);
 }
 
 /* Community Apps */
@@ -139,7 +156,7 @@ border: hidden !important;
     -webkit-backdrop-filter: blur(15px) saturate(150%);
     backdrop-filter: blur(15px) saturate(150%);
     padding: 10px;
-    border: 1px solid #037171;
+    border: 1px solid var(--color-gamma);
     border-radius: 10px;
 }
 hr {
@@ -179,7 +196,7 @@ hr {
 }
 
 .ca_popupIconArea {
-    border: 1px solid #037171;
+    border: 1px solid var(--color-gamma);
     border-radius: 10px;
     padding-left: 10px;
 }
