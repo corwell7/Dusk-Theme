@@ -1,6 +1,6 @@
-# By Corey
+# By Corey Powell
 
-midnight:
+dusk:
   ###################Dark Mode Base###################
   state-icon-error-color: var(--error-state-color, var(--error-color))
   state-unavailable-color: var(--state-icon-unavailable-color, var(--disabled-text-color))
@@ -130,8 +130,8 @@ midnight:
   paper-card-background-color: var(--ha-card-background)
   
   #Background
-  #background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/midnight/towerdark.jpg')"
-  lovelace-background: var(--background-image)
+  #background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/dusk/towerdark.jpg')"
+  #lovelace-background: var(--background-image)
   
   #Colour
   accent-color: var(--primary-color)
@@ -152,7 +152,7 @@ midnight:
   state-icon-active-color: "#fd356e"
   
   ######################CSS MODS############################
-  card-mod-theme: midnight
+  card-mod-theme: dusk
   card-mod-view: &card-mod-view |
     .main-title {
       font-size: 10pt;
@@ -180,7 +180,7 @@ midnight:
       left: 0px;
       bottom: 0px;
       right: 0px;
-      background-image: url("/hacsfiles/themes/midnight/towerdark.jpg");
+      background-image: url("/hacsfiles/themes/dusk/toweredit.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center top;
