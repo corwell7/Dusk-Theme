@@ -126,6 +126,7 @@ dusk:
   #paper-listbox-background-color: var(--primary-background-color)
   ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.5)"
   ha-card-background: "rgba(0, 10, 20, 0.5)"
+  ha-card-border-color: "#037171"
   ha-card-border-radius: 15px
   paper-card-background-color: var(--ha-card-background)
   
