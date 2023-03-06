@@ -259,3 +259,19 @@ hr {
 .popupInfo {
     padding-top: 17px;
 }
+
+/* Notifications */
+
+.jGrowl-notification.alert {
+	color: #fd356e;
+	background-color: var(--color-beta);
+	border: 1px solid #fd356e;
+	box-shadow: 2px 2px 1px #000;
+}
+
+.jGrowl-notification.normal {
+	color: #35fdaa;
+	background-color: var(--color-beta);
+	border: 1px solid #35fdaa;
+	box-shadow: 2px 2px 1px #000;
+}
