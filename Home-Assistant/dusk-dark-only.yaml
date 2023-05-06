@@ -126,20 +126,20 @@ dusk:
   #paper-listbox-background-color: var(--primary-background-color)
   ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.5)"
   ha-card-background: "rgba(0, 10, 20, 0.5)"
-  ha-card-border-color: "#037171"
+  ha-card-border-width: 0px
   ha-card-border-radius: 15px
   paper-card-background-color: var(--ha-card-background)
   
   #Background
-  #background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/dusk/towerdark.jpg')"
+  #background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/dusk/toweredit.jpg')"
   #lovelace-background: var(--background-image)
+  #background: var(--lovelace-background)
   
   #Colour
   accent-color: var(--primary-color)
   primary-color: "#037171"
   primary-background-color: "#12171a"
   secondary-background-color: "#151f24"
-  divider-color: none
   app-header-background-color: "rgba(0, 10, 20, 0.3)"
   app-header-edit-background-color: var(--app-header-background-color)
 
@@ -168,11 +168,12 @@ dusk:
     #tabbar:not(.bottom-bar) {
       justify-content: left;
     }
-    #Set fixed background (works on desktop AND mobile)
-    ha-app-layout {
+    
+    #Set fixed background (works on desktop AND mobile) [no idea how this works]
+    hui-view {
       position: relative;
     }
-    ha-app-layout::before {
+    hui-view::before {
       content: '';
       position: fixed;
       z-index: -1;
@@ -187,7 +188,9 @@ dusk:
       background-position: center top;
     }
     hui-view {
-      background: none !important;
+      background-image: url("/hacsfiles/themes/dusk/toweredit.jpg");
+      background: var(--background-image) !important;
+      lovelace-background: var(--background) !important;
     }
 
   card-mod-row-yaml: &card-mod-row |
@@ -289,26 +292,10 @@ dusk:
       }
   card-mod-root-yaml: &card-mod-root |
     .: |
-      @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-        app-header, app-toolbar {
-          background-color: "rgba(var(--rgb-primary-background-color),.33)"
-          backdrop-filter: blur(8px);
-          -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-        }
+      div.header {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
       }
-      app-toolbar [main-title] {
-        font-size: var(--h5-font-size);
-        line-height: 1.1;
-        font-weight: var(--h5-font-weight);
-        text-transform: uppercase;
-        margin-left: 8px !important;
-      }
-    app-header$: |
-      :host::before {
-        box-shadow: inset 0px 4px 6px -4px rgb(0 0 0 / 10%) !important;
-      }
-      
   card-mod-sidebar: &card-mod-sidebar |
     .menu .title {
       font-weight: 500;
