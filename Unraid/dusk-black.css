@@ -14,31 +14,58 @@ body {
     background-position: center center;
     background-size: cover;
 }
-
 body {
     --color-alpha: #FFFFFF !important;
     --color-beta: #12171a !important;
     --color-gamma: #037171 !important;  
 }
-
 #title {
     border-radius: 10px;
 }
-
-table tbody td {
-	padding: 10px;
-}
-
-div.shade-black {
+div.shade-black { /*vpn config*/
     background-color: var(--menu-color) !important;
     padding-top: 15px !important;
     border-radius: 10px;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 }
+div.title {
+    border: none;
+    position: sticky;
+    border-radius: 12px;
+    background-color: var(--color-beta);
+    margin: 20px 0 37px 0;
+}
+div.title::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 12px;
+	padding: 2px;
+	background: linear-gradient(45deg,#037171,#f15a2c);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	mask-composite: add, add;
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1;
+}
 
+
+/* Header */
 #menu {
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
     opacity: 0.95;
+}
+.nav-item a {
+    color:#abb2bf;
+}
+.nav-tile {
+    background-color:var(--menu-color);
+}
+.nav-item.active::after {
+	background-color: var(--color-gamma);
+}
+.nav-user a {
+	color:#abb2bf;
 }
 
 /* Upgrade notice */
@@ -60,6 +87,7 @@ div.shade-black {
 .ui-dialog {
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5) !important;
 }
+
 /* Button */
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button {
     background: var(--color-beta) !important;
@@ -87,23 +115,17 @@ div.shade-black {
 .dropdown-menu a {
     color: var(--color-alpha)
 }
-
 span.status {
     margin-top: 40px;
     padding-right: 25px;
 }
 
 /* Table Stuff */
-
+td.empty {
+    padding-top: 5px !important;
+}
 table {
-    border-radius: 10px;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
-}
-table.disk_status thead tr:first-child td {
-    border-radius: 10px;
-}
-table.share_status thead tr:first-child td {
-    border-radius: 10px;
 }
 table.array_status td.line {
     border-top: none;
@@ -111,12 +133,10 @@ table.array_status td.line {
 table.array_status.noshift {
     margin-top: 2px;
 }
-
 div.content.shift {
     margin-top: 10px;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 }
-
 div.content {
     -webkit-backdrop-filter: blur(15px) saturate(150%);
     backdrop-filter: blur(15px) saturate(150%);
@@ -127,15 +147,14 @@ div.content {
     padding-right: 20px;
     padding-bottom: 20px;
 }
-
 span.status.vhshift {
     margin-right: -26px !important;
     padding-left: 20px !important;
 }
 
 /* Plugins Tabs Fixes */
-div.tab [type="radio"] + label ~ .content {
-    padding-top: 50px;
+table.tablesorter.shift {
+	margin-top: 20px;
 }
 div.tab [type="radio"] + label {
     border-radius: 4px;
@@ -171,11 +190,42 @@ div.tab [type="radio"] + label:hover {
 table.share_status.dashboard {
     border: hidden;
     opacity: 0.95;
+    position: relative;
+    border-radius: 20px
+}
+table.share_status.dashboard td {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+table.share_status.dashboard tr:first-child>td {
+    padding-top:15px;
 }
 table.share_status.dashboard tr > td.next {
     border-top: 1px solid var(--color-gamma);
 }
-
+span.inner {
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+table.share_status.dashboard tbody:first-child { 
+	border: none;
+}
+table.share_status.dashboard::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 20px;
+	padding: 2px;
+	background: linear-gradient(45deg,#e22828,#ff8c2f);
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1;
+}
+table.share_status.dashboard tbody {
+	border: 2px solid var(--color-beta);
+}
+   
 /* Community Apps */
 
 .ca_holder {
@@ -241,13 +291,12 @@ hr {
     border-top-right-radius: 10px;       
 }
 
-/* Sidebar */
+/* CA Sidebar */
 .sidenav {
     background-color: unset !important;
     -webkit-backdrop-filter: blur(15px) saturate(150%);
     backdrop-filter: blur(15px) saturate(150%);
 }
-
 .ca_popupIconArea {
     border: 1px solid var(--color-gamma);
     border-radius: 10px;
