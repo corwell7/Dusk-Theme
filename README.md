@@ -1,5 +1,5 @@
 # Dusk-Theme
-Some themes for stuff
+Some themes I use for stuff. They're pretty clunky and I have no idea what I'm doing but they look okay I guess.
 
 ## Home Assistant
 REQUIRES CARD MOD
@@ -20,6 +20,6 @@ REQUIRES THEME ENGINE
 3. Import the theme in Theme Engine.
 4. Load the theme.
 
-![Screenshot](/Unraid/screenshot1.png)
+![Screenshot](/Unraid/unraid6.12.png)
 
-![Screenshot](/Unraid/screenshot2.png)
+![Screenshot](/Unraid/unraid6.12[2].png)
