@@ -48,8 +48,12 @@ div.title::before {
 	mask-composite: exclude;
 	z-index: -1;
 }
-
-
+.ui-widget-content {
+	color: #FFFFFF !important;
+}
+.ui-widget-header {
+	color: #FFFFFF !important;
+}
 /* Header */
 #menu {
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
@@ -217,6 +221,7 @@ table.share_status.dashboard::before {
 	border-radius: 20px;
 	padding: 2px;
 	background: linear-gradient(45deg,#e22828,#ff8c2f);
+    /*background: linear-gradient(45deg,#35fdaa,#0ff);*/
 	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
 	-webkit-mask-composite: xor;
 	mask-composite: exclude;
