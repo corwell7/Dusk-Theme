@@ -234,10 +234,14 @@ table.share_status.dashboard tbody {
 /* Community Apps */
 
 .ca_holder {
-    border: hidden !important;
+    border: 2px solid transparent !important;
     border-radius: 10px;
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 }
+.ca_holder:hover {
+    border: 2px solid #f15a2c !important;
+}
+
 .multi_installDiv {
 	-webkit-backdrop-filter: blur(15px) saturate(150%);
 	backdrop-filter: blur(15px) saturate(150%);
