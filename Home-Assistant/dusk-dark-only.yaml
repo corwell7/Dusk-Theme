@@ -180,19 +180,16 @@ dusk:
       background: var(--background-image) !important;
       lovelace-background: var(--background) !important;
     }
+    div.header {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
       
   card-mod-card: &card-mod-card |
     ha-card {
       -webkit-backdrop-filter: blur(8px) saturate(150%);
       backdrop-filter: blur(8px) saturate(150%);
     }
-
-  card-mod-root-yaml: &card-mod-root |
-    .: |
-      div.header {
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      }
   card-mod-sidebar: &card-mod-sidebar |
     .menu .title {
       font-weight: 500;

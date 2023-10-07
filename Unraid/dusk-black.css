@@ -92,6 +92,8 @@ div.title::before {
     box-shadow: 0px 5px 5px rgba(0,0,0,0.5) !important;
 }
 
+
+
 /* Button */
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button {
     background: var(--color-beta) !important;
@@ -188,6 +190,10 @@ div.tab [type="radio"] + label:hover {
 .sweet-alert button {
     background: var(--color-beta) !important;
     color: var(--color-gamma);
+}
+.la-ball-fall {
+	font-size: 0;
+	color: var(--color-gamma) !important;
 }
 
 /* Dash */
