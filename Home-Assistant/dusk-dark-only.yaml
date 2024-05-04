@@ -170,19 +170,22 @@ dusk:
       left: 0px;
       bottom: 0px;
       right: 0px;
-      background-image: url("/hacsfiles/themes/dusk/toweredit.jpg");
+      background-image: url("/hacsfiles/themes/dusk/toweredit2.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center top;
     }
     hui-view {
-      background-image: url("/hacsfiles/themes/dusk/toweredit.jpg");
+      background-image: url("/hacsfiles/themes/dusk/toweredit2.jpg");
       background: var(--background-image) !important;
       lovelace-background: var(--background) !important;
     }
     div.header {
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
+    }
+    div#view {
+      background: unset
     }
       
   card-mod-card: &card-mod-card |
