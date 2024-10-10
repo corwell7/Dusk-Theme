@@ -124,10 +124,9 @@ dusk:
   
   #Card
   #paper-listbox-background-color: var(--primary-background-color)
-  ha-card-box-shadow: "0px 5px 5px rgba(0,0,0,0.5)"
+  ha-card-box-shadow: "0px 2px 2px rgba(0,0,0,0.5)"
   ha-card-background: "rgba(0, 10, 20, 0.5)"
-  ha-card-border-width: 0px
-  ha-card-border-radius: 15px
+  ha-card-border-radius: 12px
   paper-card-background-color: var(--ha-card-background)
   
   #Background
@@ -143,7 +142,7 @@ dusk:
   app-header-background-color: "rgba(0, 10, 20, 0.3)"
   app-header-edit-background-color: var(--app-header-background-color)
   text-on-state-color: var(--primary-text-color)
-  divider-color: var(--primary-color)
+  divider-color: "#263740"
 
   #Popup Blur
   dialog-backdrop-filter: blur(5px)
@@ -170,15 +169,10 @@ dusk:
       left: 0px;
       bottom: 0px;
       right: 0px;
-      background-image: url("/hacsfiles/themes/dusk/toweredit2.jpg");
+      background-image: url("/local/assets/toweredit2.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center top;
-    }
-    hui-view {
-      background-image: url("/hacsfiles/themes/dusk/toweredit2.jpg");
-      background: var(--background-image) !important;
-      lovelace-background: var(--background) !important;
     }
     div.header {
       backdrop-filter: blur(8px);
@@ -192,15 +186,27 @@ dusk:
     ha-card {
       -webkit-backdrop-filter: blur(8px) saturate(150%);
       backdrop-filter: blur(8px) saturate(150%);
+      border-radius: 12px;
+    }
+    ha-card.type-custom-frigate-card {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    ha-card.type-custom-mushroom-title-card {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
     }
   card-mod-sidebar: &card-mod-sidebar |
     .menu .title {
       font-weight: 500;
     }
+    .iron-selected paper-icon-item::before {
+      border-radius: 12px !important;
+    }
     .iron-selected paper-icon-item {
-      border-left: 3px solid var(--accent-color) !important;
-      border-radius: 5px !important;
-      padding-left: 9px !important;
+      border-left: 2px solid var(--accent-color) !important;
+      border-radius: 12px !important;
+      padding-left: 10px !important;
     }
     .profile.iron-selected paper-icon-item {
       padding-left: 1px !important;
