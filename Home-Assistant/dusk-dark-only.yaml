@@ -188,6 +188,10 @@ dusk:
       backdrop-filter: blur(8px) saturate(150%);
       border-radius: 12px;
     }
+    ha-card.type-undefined {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
     ha-card.type-custom-frigate-card {
       -webkit-backdrop-filter: none;
       backdrop-filter: none;
