@@ -130,9 +130,10 @@ dusk:
   paper-card-background-color: var(--ha-card-background)
   
   #Background
-  #background-image: "center / cover no-repeat fixed url('/hacsfiles/themes/dusk/toweredit.jpg')"
+  #background-image: "center / cover no-repeat fixed url('/local/assets/toweredit2.jpg')"
   #lovelace-background: var(--background-image)
   #background: var(--lovelace-background)
+  view-background: transparent
   
   #Colour
   accent-color: var(--primary-color)
@@ -178,9 +179,6 @@ dusk:
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
     }
-    div#view {
-      background: unset
-    }
       
   card-mod-card: &card-mod-card |
     ha-card {
@@ -188,7 +186,12 @@ dusk:
       backdrop-filter: blur(8px) saturate(150%);
       border-radius: 12px;
     }
+    ## Remove blur from specific ha-card elements
     ha-card.type-undefined {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    ha-card.type-map {
       -webkit-backdrop-filter: none;
       backdrop-filter: none;
     }
